@@ -11,10 +11,6 @@ import XCTest
 
 class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
     
-    let fileName = "hightemp"
-    
-    let q11AnswerFileName = "q11_answer"
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,66 +27,25 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
     
     func testQ11() {
         XCTAssertEqual(Chapter2.q11(input: inputContents),
-                       getContents(inFileName: q11AnswerFileName))
+                       getContents(inFileName: "q11_a1"))
     }
     
+    // cut -f 1 hightemp.txt > q12_a1.txt
+    // cut -f 2 hightemp.txt > q12_a2.txt
+    // 上記2ファイルと比較
     func testQ12() {
-        let expected1 = """
-                        高知県
-                        埼玉県
-                        岐阜県
-                        山形県
-                        山梨県
-                        和歌山県
-                        静岡県
-                        山梨県
-                        埼玉県
-                        群馬県
-                        群馬県
-                        愛知県
-                        千葉県
-                        静岡県
-                        愛媛県
-                        山形県
-                        岐阜県
-                        群馬県
-                        千葉県
-                        埼玉県
-                        大阪府
-                        山梨県
-                        山形県
-                        愛知県
-                        """
-        let expected2 = """
-                        江川崎
-                        熊谷
-                        多治見
-                        山形
-                        甲府
-                        かつらぎ
-                        天竜
-                        勝沼
-                        越谷
-                        館林
-                        上里見
-                        愛西
-                        牛久
-                        佐久間
-                        宇和島
-                        酒田
-                        美濃
-                        前橋
-                        茂原
-                        鳩山
-                        豊中
-                        大月
-                        鶴岡
-                        名古屋
-                        """
-        
-        let actual = Chapter2.q12(input: inputContents)
-        XCTAssertEqual(actual.0, expected1)
-        XCTAssertEqual(actual.1, expected2)
+        let actual1 = Chapter2.q12(input: inputContents, column: 1)
+        let actual2 = Chapter2.q12(input: inputContents, column: 2)
+        XCTAssertEqual(actual1, getContents(inFileName: "q12_a1"))
+        XCTAssertEqual(actual2, getContents(inFileName: "q12_a2"))
+    }
+    
+    /// paste q12_a1.txt q12_a2.txt > q13_a1.txtと比較
+    func testQ13() {
+        let column1 = Chapter2.q12(input: inputContents, column: 1)
+        let column2 = Chapter2.q12(input: inputContents, column: 2)
+        XCTAssertEqual(Chapter2.q13(column1: column1, column2: column2),
+                       getContents(inFileName: "q13_a1"))
     }
     
 }
@@ -98,7 +53,7 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
 extension LanguageProcessing100knock2015Chapter2Tests {
     
     var inputContents : String {
-        return getContents(inFileName: fileName)
+        return getContents(inFileName: "hightemp")
     }
     
     func getContents(inFileName: String) -> String {

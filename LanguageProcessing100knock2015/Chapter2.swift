@@ -24,14 +24,21 @@ struct Chapter2 {
     
     //12. 1列目をcol1.txtに，2列目をcol2.txtに保存
     //各行の1列目だけを抜き出したものをcol1.txtに，2列目だけを抜き出したものをcol2.txtとしてファイルに保存せよ．確認にはcutコマンドを用いよ．
-    static func q12(input: String) -> (String, String) {
-        let rows = input.components(separatedBy: CharacterSet.newlines).filter{ !$0.isEmpty }
-        let firstColumn = rows.map{ $0.components(separatedBy: CharacterSet.whitespaces).first! }
-        let secondColumn = rows.map{ $0.components(separatedBy: CharacterSet.whitespaces)[1] }
-        let tuple = (firstColumn.joined(separator: "\n"), secondColumn.joined(separator: "\n"))
-        return tuple
+    static func q12(input: String, column: Int) -> String {
+        let rows = input.components(separatedBy: CharacterSet.newlines)
+        
+        let column = rows.map {
+            return !$0.isEmpty ? $0.components(separatedBy: CharacterSet.whitespaces)[column - 1] : $0
+        }
+        return column.joined(separator: "\n")
     }
     
-
+    // 13. col1.txtとcol2.txtをマージ
+    // 12で作ったcol1.txtとcol2.txtを結合し，元のファイルの1列目と2列目をタブ区切りで並べたテキストファイルを作成せよ．確認にはpasteコマンドを用いよ．
+    static func q13(column1: String, column2: String) -> String {
+        return zip(column1.components(separatedBy: "\n"),
+                   column2.components(separatedBy: "\n"))
+            .map{ !$0.isEmpty ? "\($0)\t\($1)" : $0 }.joined(separator: "\n")
+    }
     
 }
