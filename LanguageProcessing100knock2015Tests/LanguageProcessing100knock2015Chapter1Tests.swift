@@ -9,7 +9,7 @@
 import XCTest
 @testable import LanguageProcessing100knock2015
 
-class LanguageProcessing100knock2015Tests: XCTestCase {
+class LanguageProcessing100knock2015Chapter1Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -1,5 +1,5 @@
 //
-//  Questions.swift
+//  Chapter1.swift
 //  LanguageProcessing100knock2015
 //
 //  Created by koichi tanaka on 2017/10/02.
