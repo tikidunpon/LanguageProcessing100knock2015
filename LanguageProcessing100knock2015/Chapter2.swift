@@ -21,6 +21,17 @@ struct Chapter2 {
     static func q11(input: String) -> String {
         return input.replacingOccurrences(of: "\t", with: " ", options: .regularExpression, range: nil)
     }
+    
+    //12. 1列目をcol1.txtに，2列目をcol2.txtに保存
+    //各行の1列目だけを抜き出したものをcol1.txtに，2列目だけを抜き出したものをcol2.txtとしてファイルに保存せよ．確認にはcutコマンドを用いよ．
+    static func q12(input: String) -> (String, String) {
+        let rows = input.components(separatedBy: CharacterSet.newlines).filter{ !$0.isEmpty }
+        let firstColumn = rows.map{ $0.components(separatedBy: CharacterSet.whitespaces).first! }
+        let secondColumn = rows.map{ $0.components(separatedBy: CharacterSet.whitespaces)[1] }
+        let tuple = (firstColumn.joined(separator: "\n"), secondColumn.joined(separator: "\n"))
+        return tuple
+    }
+    
 
     
 }
