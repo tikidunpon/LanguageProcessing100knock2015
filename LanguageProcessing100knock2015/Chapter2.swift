@@ -41,4 +41,23 @@ struct Chapter2 {
             .map{ !$0.isEmpty ? "\($0)\t\($1)" : $0 }.joined(separator: "\n")
     }
     
+    //14. 先頭からN行を出力
+    //自然数Nをコマンドライン引数などの手段で受け取り，入力のうち先頭のN行だけを表示せよ．確認にはheadコマンドを用いよ．
+    static func head(input: String, rowNumber: Int) -> String {
+        let rows = input.components(separatedBy: CharacterSet.newlines)
+        guard rows.indices.contains(rowNumber - 1) else { return "" }
+        return rows.prefix(rowNumber).joined(separator: "\n") + "\n"
+    }
+    
+    //15. 末尾のN行を出力
+    //自然数Nをコマンドライン引数などの手段で受け取り，入力のうち末尾のN行だけを表示せよ．確認にはtailコマンドを用いよ．
+    static func tail(input: String, rowNumber: Int) -> String {
+        let rows = input.components(separatedBy: CharacterSet.newlines).dropLast()
+        guard rows.count >= rowNumber else { return "" }
+        return rows.suffix(rowNumber).joined(separator: "\n") + "\n"
+    }
+    
+
+
+    
 }

@@ -48,6 +48,27 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
                        getContents(inFileName: "q13_a1"))
     }
     
+    // head -n 1 hightemp.txt > q14_a1.txt
+    // head -n 2 hightemp.txt > q14_a2.txt
+    // headは末尾に改行を含む為headの戻り値の末尾にも改行を入れて返している
+    func testQ14() {
+        let actual1 = Chapter2.head(input: inputContents, rowNumber: 1)
+        let actual2 = Chapter2.head(input: inputContents, rowNumber: 2)
+        
+        XCTAssertEqual(actual1, getContents(inFileName: "q14_a1"))
+        XCTAssertEqual(actual2, getContents(inFileName: "q14_a2"))
+    }
+    
+    // tail -n 1 hightemp.txt > q15_a1.txt
+    // tail -n 2 hightemp.txt > q15_a2.txt
+    func testQ15() {
+        let actual1 = Chapter2.tail(input: inputContents, rowNumber: 1)
+        let actual2 = Chapter2.tail(input: inputContents, rowNumber: 2)
+        
+        XCTAssertEqual(actual1, getContents(inFileName: "q15_a1"))
+        XCTAssertEqual(actual2, getContents(inFileName: "q15_a2"))
+    }
+    
 }
 
 extension LanguageProcessing100knock2015Chapter2Tests {
