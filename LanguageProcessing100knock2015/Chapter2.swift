@@ -57,6 +57,17 @@ struct Chapter2 {
         return rows.suffix(rowNumber).joined(separator: "\n") + "\n"
     }
     
+    //16. ファイルをN分割する
+    //自然数Nをコマンドライン引数などの手段で受け取り，入力のファイルを行単位でN分割せよ．同様の処理をsplitコマンドで実現せよ．
+    static func split(input: String, chunkSize: Int) -> [String] {
+        let rows = input.components(separatedBy: CharacterSet.newlines).dropLast()
+        let splited = stride(from: 0, to: rows.count, by: chunkSize).map { (v) in
+            return rows[v..<min(v + chunkSize, rows.count)].joined(separator: "\n") + "\n"
+        }
+        return splited
+    }
+    
+
 
 
     

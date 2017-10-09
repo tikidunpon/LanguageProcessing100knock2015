@@ -69,6 +69,15 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
         XCTAssertEqual(actual2, getContents(inFileName: "q15_a2"))
     }
     
+    // split -l 10 hightemp.txt
+    func testQ16() {
+        let actual1 = Chapter2.split(input: inputContents, chunkSize: 10)
+        XCTAssertEqual(actual1.count, 3)
+        XCTAssertEqual(actual1.first!, getContents(inFileName: "q16_a1"))
+        XCTAssertEqual(actual1[1], getContents(inFileName: "q16_a2"))
+        XCTAssertEqual(actual1[2], getContents(inFileName: "q16_a3"))
+    }
+    
 }
 
 extension LanguageProcessing100knock2015Chapter2Tests {
