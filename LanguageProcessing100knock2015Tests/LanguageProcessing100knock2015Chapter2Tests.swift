@@ -80,8 +80,18 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
     
     // cut -f 1  hightemp.txt | LANG=ja_JP.UTF8 sort | uniq > q17_a1.txt
     func testQ17() {
-        let actual1 = Chapter2.sort(input: inputContents)
+        let actual1 = Chapter2.sortedUniq(input: inputContents)
         XCTAssertEqual(actual1, getContents(inFileName: "q17_a1"))
+    }
+    
+    // LANG=ja_JP.UTF8 sort -k3 -r hightemp.txt > q18_a1.txt
+    func testQ18() {
+        let actual1 = Chapter2.sortedDesc(input: inputContents)
+                              .first!.components(separatedBy: CharacterSet.whitespaces)[2]
+        let actual2 = Chapter2.sortedDesc(input: inputContents)
+                              .last!.components(separatedBy: CharacterSet.whitespaces)[2]
+        XCTAssertEqual(Int(actual1), 41)
+        XCTAssertEqual(Double(actual2), 39.9)
     }
     
 }

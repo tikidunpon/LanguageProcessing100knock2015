@@ -69,13 +69,24 @@ struct Chapter2 {
     
     //17. １列目の文字列の異なり
     //1列目の文字列の種類（異なる文字列の集合）を求めよ．確認にはsort, uniqコマンドを用いよ．
-    static func sort(input: String) -> String {
+    static func sortedUniq(input: String) -> String {
         let column1 = Chapter2.cut(input: input, n: 1)
         let sorted = Array(Set(column1.components(separatedBy: CharacterSet.newlines)))
             .sorted(by: <).filter{ !$0.isEmpty }
         return sorted.joined(separator: "\n" ) + "\n"
     }
 
+    //18. 各行を3コラム目の数値の降順にソート
+    //各行を3コラム目の数値の逆順で整列せよ（注意: 各行の内容は変更せずに並び替えよ）．確認にはsortコマンドを用いよ（この問題はコマンドで実行した時の結果と合わなくてもよい）．
+    static func sortedDesc(input: String) -> [String] {
+        let rows = input.components(separatedBy: CharacterSet.newlines).dropLast()
+        let sorted = rows.sorted { (row1, row2) -> Bool in
+            let elements1 = row1.components(separatedBy: CharacterSet.whitespaces)
+            let elements2 = row2.components(separatedBy: CharacterSet.whitespaces)
+            return elements1[2] > elements2[2]
+        }
+        return sorted
+    }
 
 
 
