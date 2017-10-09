@@ -94,6 +94,14 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
         XCTAssertEqual(Double(actual2), 39.9)
     }
     
+    // cut -f 1 hightemp.txt | sort | uniq -c | sort -r > q19_a1
+    // 上記出力結果のうち、重複回数部分だけマッチしているかのみチェック
+    func testQ19() {
+        let actual1 = Chapter2.sortedFrequencyDesc(input: inputContents)
+        XCTAssertEqual(actual1.map{$0.1}.prefix(4), [3,3,3,3])
+        XCTAssertEqual(actual1.map{$0.1}[4..<8], [2,2,2,2])
+        XCTAssertEqual(actual1.map{$0.1}.suffix(4), [1,1,1,1])
+    }
 }
 
 extension LanguageProcessing100knock2015Chapter2Tests {

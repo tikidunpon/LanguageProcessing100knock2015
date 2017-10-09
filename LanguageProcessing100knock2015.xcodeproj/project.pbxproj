@@ -30,6 +30,7 @@
 		6B70B84E1F828298005CF2D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B70B84C1F828298005CF2D9 /* LaunchScreen.storyboard */; };
 		6B70B8591F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70B8581F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift */; };
 		6B70B8721F8282AB005CF2D9 /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70B8711F8282AB005CF2D9 /* Chapter1.swift */; };
+		6BAAD8DC1F8BC7CA0074CE39 /* q19_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		6B70B8581F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageProcessing100knock2015Chapter1Tests.swift; sourceTree = "<group>"; };
 		6B70B85A1F828299005CF2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B70B8711F8282AB005CF2D9 /* Chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
+		6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q19_a1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				6B53C4C51F8B9E10007217E3 /* q16_a3.txt */,
 				6B53C4C91F8BB0FC007217E3 /* q17_a1.txt */,
 				6B53C4CB1F8BB88B007217E3 /* q18_a1.txt */,
+				6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */,
 			);
 			path = LanguageProcessing100knock2015Tests;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				6B53C4C21F8A6AB5007217E3 /* q15_a2.txt in Resources */,
 				6B53C4BA1F8A5678007217E3 /* q13_a1.txt in Resources */,
 				6B53C4C61F8BA54D007217E3 /* q16_a1.txt in Resources */,
+				6BAAD8DC1F8BC7CA0074CE39 /* q19_a1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

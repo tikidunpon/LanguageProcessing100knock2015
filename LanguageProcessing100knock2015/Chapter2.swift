@@ -87,8 +87,18 @@ struct Chapter2 {
         }
         return sorted
     }
-
-
-
+    
+    //19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる
+    //各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．確認にはcut, uniq, sortコマンドを用いよ．
+    static func sortedFrequencyDesc(input: String) -> [(String, Int)] {
+        let column1 = Chapter2.cut(input: input, n: 1).components(separatedBy: CharacterSet.newlines)
+        let countedSet = NSCountedSet(array: column1)
+        let sortedTupleArray = Dictionary(uniqueKeysWithValues:
+            countedSet.map { (o) -> (String, Int) in
+                let s = o as! String
+                return (s, countedSet.count(for: s))
+        }).sorted(by: {$0.1 > $1.1 })
+        return sortedTupleArray.filter{ !$0.key.isEmpty }
+    }
     
 }
