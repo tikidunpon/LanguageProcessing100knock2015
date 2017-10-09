@@ -67,6 +67,15 @@ struct Chapter2 {
         return splited
     }
     
+    //17. １列目の文字列の異なり
+    //1列目の文字列の種類（異なる文字列の集合）を求めよ．確認にはsort, uniqコマンドを用いよ．
+    static func sort(input: String) -> String {
+        let column1 = Chapter2.cut(input: input, n: 1)
+        let sorted = Array(Set(column1.components(separatedBy: CharacterSet.newlines)))
+            .sorted(by: <).filter{ !$0.isEmpty }
+        return sorted.joined(separator: "\n" ) + "\n"
+    }
+
 
 
 

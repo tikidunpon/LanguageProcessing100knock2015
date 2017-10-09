@@ -78,6 +78,12 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
         XCTAssertEqual(actual1[2], getContents(inFileName: "q16_a3"))
     }
     
+    // cut -f 1  hightemp.txt | LANG=ja_JP.UTF8 sort | uniq > q17_a1.txt
+    func testQ17() {
+        let actual1 = Chapter2.sort(input: inputContents)
+        XCTAssertEqual(actual1, getContents(inFileName: "q17_a1"))
+    }
+    
 }
 
 extension LanguageProcessing100knock2015Chapter2Tests {

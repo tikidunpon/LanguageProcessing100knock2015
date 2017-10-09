@@ -21,6 +21,7 @@
 		6B53C4C61F8BA54D007217E3 /* q16_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4C31F8B9E0F007217E3 /* q16_a1.txt */; };
 		6B53C4C71F8BA54D007217E3 /* q16_a2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4C41F8B9E0F007217E3 /* q16_a2.txt */; };
 		6B53C4C81F8BA54D007217E3 /* q16_a3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4C51F8B9E10007217E3 /* q16_a3.txt */; };
+		6B53C4CA1F8BB0FE007217E3 /* q17_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4C91F8BB0FC007217E3 /* q17_a1.txt */; };
 		6B70B8441F828298005CF2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70B8431F828298005CF2D9 /* AppDelegate.swift */; };
 		6B70B8461F828298005CF2D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70B8451F828298005CF2D9 /* ViewController.swift */; };
 		6B70B8491F828298005CF2D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B70B8471F828298005CF2D9 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		6B53C4C31F8B9E0F007217E3 /* q16_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q16_a1.txt; sourceTree = "<group>"; };
 		6B53C4C41F8B9E0F007217E3 /* q16_a2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q16_a2.txt; sourceTree = "<group>"; };
 		6B53C4C51F8B9E10007217E3 /* q16_a3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q16_a3.txt; sourceTree = "<group>"; };
+		6B53C4C91F8BB0FC007217E3 /* q17_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q17_a1.txt; sourceTree = "<group>"; };
 		6B70B8401F828298005CF2D9 /* LanguageProcessing100knock2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageProcessing100knock2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B70B8431F828298005CF2D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B70B8451F828298005CF2D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				6B53C4C31F8B9E0F007217E3 /* q16_a1.txt */,
 				6B53C4C41F8B9E0F007217E3 /* q16_a2.txt */,
 				6B53C4C51F8B9E10007217E3 /* q16_a3.txt */,
+				6B53C4C91F8BB0FC007217E3 /* q17_a1.txt */,
 			);
 			path = LanguageProcessing100knock2015Tests;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				6B53C4B71F8A50AE007217E3 /* q12_a2.txt in Resources */,
 				6B53C4B61F8A50AE007217E3 /* q12_a1.txt in Resources */,
 				6B53C4BD1F8A67B5007217E3 /* q14_a2.txt in Resources */,
+				6B53C4CA1F8BB0FE007217E3 /* q17_a1.txt in Resources */,
 				6B53C4C21F8A6AB5007217E3 /* q15_a2.txt in Resources */,
 				6B53C4BA1F8A5678007217E3 /* q13_a1.txt in Resources */,
 				6B53C4C61F8BA54D007217E3 /* q16_a1.txt in Resources */,
