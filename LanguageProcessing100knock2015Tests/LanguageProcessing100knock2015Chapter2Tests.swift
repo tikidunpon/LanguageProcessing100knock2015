@@ -22,11 +22,11 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
     }
     
     func testQ10() {
-        XCTAssertEqual(Chapter2.q10(input: inputContents), 25)
+        XCTAssertEqual(Chapter2.wc(input: inputContents), 25)
     }
     
     func testQ11() {
-        XCTAssertEqual(Chapter2.q11(input: inputContents),
+        XCTAssertEqual(Chapter2.tr(input: inputContents, replacement: " "),
                        getContents(inFileName: "q11_a1"))
     }
     
@@ -34,17 +34,17 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
     // cut -f 2 hightemp.txt > q12_a2.txt
     // 上記2ファイルと比較
     func testQ12() {
-        let actual1 = Chapter2.q12(input: inputContents, column: 1)
-        let actual2 = Chapter2.q12(input: inputContents, column: 2)
+        let actual1 = Chapter2.cut(input: inputContents, n: 1)
+        let actual2 = Chapter2.cut(input: inputContents, n: 2)
         XCTAssertEqual(actual1, getContents(inFileName: "q12_a1"))
         XCTAssertEqual(actual2, getContents(inFileName: "q12_a2"))
     }
     
     /// paste q12_a1.txt q12_a2.txt > q13_a1.txtと比較
     func testQ13() {
-        let column1 = Chapter2.q12(input: inputContents, column: 1)
-        let column2 = Chapter2.q12(input: inputContents, column: 2)
-        XCTAssertEqual(Chapter2.q13(column1: column1, column2: column2),
+        let column1 = Chapter2.cut(input: inputContents, n: 1)
+        let column2 = Chapter2.cut(input: inputContents, n: 2)
+        XCTAssertEqual(Chapter2.paste(column1: column1, column2: column2),
                        getContents(inFileName: "q13_a1"))
     }
     
