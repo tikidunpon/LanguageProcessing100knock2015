@@ -95,9 +95,11 @@ class LanguageProcessing100knock2015Chapter2Tests: XCTestCase {
     }
     
     // cut -f 1 hightemp.txt | sort | uniq -c | sort -r > q19_a1
-    // 上記出力結果のうち、重複回数部分だけマッチしているかのみチェック
     func testQ19() {
         let actual1 = Chapter2.sortedFrequencyDesc(input: inputContents)
+        XCTAssertEqual(Set(actual1.map{$0.0}.prefix(4)), Set(["群馬県","山梨県","山形県","埼玉県"]))
+        XCTAssertEqual(Set(actual1.map{$0.0}[4..<8]), Set(["静岡県","愛知県","岐阜県","千葉県"]))
+        XCTAssertEqual(Set(actual1.map{$0.0}.suffix(4)), Set(["和歌山県","高知県","愛媛県","大阪府"]))
         XCTAssertEqual(actual1.map{$0.1}.prefix(4), [3,3,3,3])
         XCTAssertEqual(actual1.map{$0.1}[4..<8], [2,2,2,2])
         XCTAssertEqual(actual1.map{$0.1}.suffix(4), [1,1,1,1])
