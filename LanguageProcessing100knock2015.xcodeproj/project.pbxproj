@@ -10,7 +10,6 @@
 		6B53C4AC1F8A137C007217E3 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53C4AB1F8A137C007217E3 /* Chapter2.swift */; };
 		6B53C4AE1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53C4AD1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift */; };
 		6B53C4B11F8A1E00007217E3 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4AF1F8A1760007217E3 /* hightemp.txt */; };
-		6B53C4B31F8A2C93007217E3 /* q11_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4B21F8A2C8F007217E3 /* q11_a1.txt */; };
 		6B53C4B61F8A50AE007217E3 /* q12_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4B51F8A5026007217E3 /* q12_a1.txt */; };
 		6B53C4B71F8A50AE007217E3 /* q12_a2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4B41F8A5026007217E3 /* q12_a2.txt */; };
 		6B53C4BA1F8A5678007217E3 /* q13_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4B81F8A5671007217E3 /* q13_a1.txt */; };
@@ -31,6 +30,7 @@
 		6B70B8591F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70B8581F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift */; };
 		6B70B8721F8282AB005CF2D9 /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70B8711F8282AB005CF2D9 /* Chapter1.swift */; };
 		6BAAD8DC1F8BC7CA0074CE39 /* q19_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */; };
+		6BAAD8DE1F8BD31A0074CE39 /* q11_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BAAD8DD1F8BD3180074CE39 /* q11_a1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 		6B53C4AB1F8A137C007217E3 /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		6B53C4AD1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageProcessing100knock2015Chapter2Tests.swift; sourceTree = "<group>"; };
 		6B53C4AF1F8A1760007217E3 /* hightemp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
-		6B53C4B21F8A2C8F007217E3 /* q11_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = q11_a1.txt; path = LanguageProcessing100knock2015/q11_a1.txt; sourceTree = SOURCE_ROOT; };
 		6B53C4B41F8A5026007217E3 /* q12_a2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q12_a2.txt; sourceTree = "<group>"; };
 		6B53C4B51F8A5026007217E3 /* q12_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q12_a1.txt; sourceTree = "<group>"; };
 		6B53C4B81F8A5671007217E3 /* q13_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q13_a1.txt; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		6B70B85A1F828299005CF2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B70B8711F8282AB005CF2D9 /* Chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
 		6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q19_a1.txt; sourceTree = "<group>"; };
+		6BAAD8DD1F8BD3180074CE39 /* q11_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q11_a1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 				6B70B85A1F828299005CF2D9 /* Info.plist */,
 				6B70B8581F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift */,
 				6B53C4AD1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift */,
-				6B53C4B21F8A2C8F007217E3 /* q11_a1.txt */,
+				6BAAD8DD1F8BD3180074CE39 /* q11_a1.txt */,
 				6B53C4B51F8A5026007217E3 /* q12_a1.txt */,
 				6B53C4B41F8A5026007217E3 /* q12_a2.txt */,
 				6B53C4B81F8A5671007217E3 /* q13_a1.txt */,
@@ -244,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B53C4C11F8A6AB5007217E3 /* q15_a1.txt in Resources */,
-				6B53C4B31F8A2C93007217E3 /* q11_a1.txt in Resources */,
 				6B53C4B11F8A1E00007217E3 /* hightemp.txt in Resources */,
 				6B53C4C81F8BA54D007217E3 /* q16_a3.txt in Resources */,
 				6B53C4BE1F8A67B7007217E3 /* q14_a1.txt in Resources */,
@@ -258,6 +257,7 @@
 				6B53C4BA1F8A5678007217E3 /* q13_a1.txt in Resources */,
 				6B53C4C61F8BA54D007217E3 /* q16_a1.txt in Resources */,
 				6BAAD8DC1F8BC7CA0074CE39 /* q19_a1.txt in Resources */,
+				6BAAD8DE1F8BD31A0074CE39 /* q11_a1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
