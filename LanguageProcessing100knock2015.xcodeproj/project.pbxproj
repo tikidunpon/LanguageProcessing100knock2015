@@ -31,6 +31,9 @@
 		6B70B8721F8282AB005CF2D9 /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70B8711F8282AB005CF2D9 /* Chapter1.swift */; };
 		6BAAD8DC1F8BC7CA0074CE39 /* q19_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */; };
 		6BAAD8DE1F8BD31A0074CE39 /* q11_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BAAD8DD1F8BD3180074CE39 /* q11_a1.txt */; };
+		6BAAD8E01F8C74870074CE39 /* Chapter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAAD8DF1F8C74870074CE39 /* Chapter3.swift */; };
+		6BAAD8E21F8C74A80074CE39 /* jawiki-country.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BAAD8E11F8C74A30074CE39 /* jawiki-country.json */; };
+		6BAAD8E41F8C75E00074CE39 /* LanguageProcessing100knock2015Chapter3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAAD8E31F8C75E00074CE39 /* LanguageProcessing100knock2015Chapter3Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		6B70B8711F8282AB005CF2D9 /* Chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
 		6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q19_a1.txt; sourceTree = "<group>"; };
 		6BAAD8DD1F8BD3180074CE39 /* q11_a1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = q11_a1.txt; sourceTree = "<group>"; };
+		6BAAD8DF1F8C74870074CE39 /* Chapter3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3.swift; sourceTree = "<group>"; };
+		6BAAD8E11F8C74A30074CE39 /* jawiki-country.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "jawiki-country.json"; sourceTree = "<group>"; };
+		6BAAD8E31F8C75E00074CE39 /* LanguageProcessing100knock2015Chapter3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageProcessing100knock2015Chapter3Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 			children = (
 				6B70B8711F8282AB005CF2D9 /* Chapter1.swift */,
 				6B53C4AB1F8A137C007217E3 /* Chapter2.swift */,
+				6BAAD8DF1F8C74870074CE39 /* Chapter3.swift */,
 				6B70B8431F828298005CF2D9 /* AppDelegate.swift */,
 				6B70B8451F828298005CF2D9 /* ViewController.swift */,
 				6B70B8471F828298005CF2D9 /* Main.storyboard */,
@@ -132,6 +139,7 @@
 				6B70B85A1F828299005CF2D9 /* Info.plist */,
 				6B70B8581F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift */,
 				6B53C4AD1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift */,
+				6BAAD8E31F8C75E00074CE39 /* LanguageProcessing100knock2015Chapter3Tests.swift */,
 				6BAAD8DD1F8BD3180074CE39 /* q11_a1.txt */,
 				6B53C4B51F8A5026007217E3 /* q12_a1.txt */,
 				6B53C4B41F8A5026007217E3 /* q12_a2.txt */,
@@ -146,6 +154,7 @@
 				6B53C4C91F8BB0FC007217E3 /* q17_a1.txt */,
 				6B53C4CB1F8BB88B007217E3 /* q18_a1.txt */,
 				6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */,
+				6BAAD8E11F8C74A30074CE39 /* jawiki-country.json */,
 			);
 			path = LanguageProcessing100knock2015Tests;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 				6B53C4BD1F8A67B5007217E3 /* q14_a2.txt in Resources */,
 				6B53C4CA1F8BB0FE007217E3 /* q17_a1.txt in Resources */,
 				6B53C4C21F8A6AB5007217E3 /* q15_a2.txt in Resources */,
+				6BAAD8E21F8C74A80074CE39 /* jawiki-country.json in Resources */,
 				6B53C4BA1F8A5678007217E3 /* q13_a1.txt in Resources */,
 				6B53C4C61F8BA54D007217E3 /* q16_a1.txt in Resources */,
 				6BAAD8DC1F8BC7CA0074CE39 /* q19_a1.txt in Resources */,
@@ -269,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B70B8721F8282AB005CF2D9 /* Chapter1.swift in Sources */,
+				6BAAD8E01F8C74870074CE39 /* Chapter3.swift in Sources */,
 				6B70B8461F828298005CF2D9 /* ViewController.swift in Sources */,
 				6B53C4AC1F8A137C007217E3 /* Chapter2.swift in Sources */,
 				6B70B8441F828298005CF2D9 /* AppDelegate.swift in Sources */,
@@ -281,6 +292,7 @@
 			files = (
 				6B53C4AE1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift in Sources */,
 				6B70B8591F828299005CF2D9 /* LanguageProcessing100knock2015Chapter1Tests.swift in Sources */,
+				6BAAD8E41F8C75E00074CE39 /* LanguageProcessing100knock2015Chapter3Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
