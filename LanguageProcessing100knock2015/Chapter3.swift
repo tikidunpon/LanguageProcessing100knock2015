@@ -59,6 +59,29 @@ struct Chapter3 {
         }
         return Set(categoryNames)
     }
+    
+    //23. セクション構造
+    //記事中に含まれるセクション名とそのレベル（例えば"== セクション名 =="なら1）を表示せよ．
+    struct Section {
+        let name: String
+        var level : Int
+    }
+    
+    static func q23(input: String) -> String {
+        let ukWiki = q20(input: input)
+        let lines = ukWiki.text.components(separatedBy: CharacterSet.newlines)
+        let sections = lines.flatMap { (line) -> Section? in
+            let matche = line.matches(regex: "^(={2,})\\s*(.+?)\\s*={2,}$")
+            if !matche.isEmpty {
+                return Section(name: matche[2], level: (matche.first?.count)! - 1)
+            } else {
+                return nil
+            }
+        }
+        return sections.map{ "\($0.name), \($0.level)" }.joined(separator: "\n")
+    }
+  
+
 
 }
 

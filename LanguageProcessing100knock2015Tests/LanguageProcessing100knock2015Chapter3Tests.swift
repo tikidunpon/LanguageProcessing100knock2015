@@ -41,6 +41,58 @@ class LanguageProcessing100knock2015Chapter3Tests: XCTestCase {
                         "1801年に設立された州・地域"])
         XCTAssertEqual(actual, expected)
     }
+    
+    func testQ23() {
+        let actual = Chapter3.q23(input: inputContents)
+        let expected =
+        """
+        国名, 5
+        歴史, 5
+        地理, 5
+        気候, 7
+        政治, 5
+        外交と軍事, 8
+        地方行政区分, 9
+        主要都市, 9
+        科学技術, 7
+        経済, 5
+        鉱業, 7
+        農業, 7
+        貿易, 7
+        通貨, 7
+        企業, 7
+        交通, 5
+        道路, 7
+        鉄道, 7
+        海運, 7
+        航空, 7
+        通信, 5
+        国民, 5
+        言語, 7
+        宗教, 7
+        婚姻, 9
+        教育, 7
+        文化, 5
+        食文化, 8
+        文学, 7
+        哲学, 9
+        音楽, 7
+        イギリスのポピュラー音楽, 19
+        映画, 7
+        コメディ, 9
+        国花, 7
+        世界遺産, 9
+        祝祭日, 8
+        スポーツ, 7
+        サッカー, 9
+        競馬, 7
+        モータースポーツ, 13
+        脚注, 5
+        関連項目, 7
+        外部リンク, 8
+        """
+        XCTAssertEqual(actual, expected)
+    }
 }
 
 extension LanguageProcessing100knock2015Chapter3Tests {
