@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B38C8AE1F98DB5100FCDE58 /* q24_a1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B38C8AD1F98DB5100FCDE58 /* q24_a1.txt */; };
 		6B53C4AC1F8A137C007217E3 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53C4AB1F8A137C007217E3 /* Chapter2.swift */; };
 		6B53C4AE1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53C4AD1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift */; };
 		6B53C4B11F8A1E00007217E3 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B53C4AF1F8A1760007217E3 /* hightemp.txt */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B38C8AD1F98DB5100FCDE58 /* q24_a1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = q24_a1.txt; sourceTree = "<group>"; };
 		6B53C4AB1F8A137C007217E3 /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		6B53C4AD1F8A1730007217E3 /* LanguageProcessing100knock2015Chapter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageProcessing100knock2015Chapter2Tests.swift; sourceTree = "<group>"; };
 		6B53C4AF1F8A1760007217E3 /* hightemp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				6B53C4C91F8BB0FC007217E3 /* q17_a1.txt */,
 				6B53C4CB1F8BB88B007217E3 /* q18_a1.txt */,
 				6BAAD8DB1F8BC7C80074CE39 /* q19_a1.txt */,
+				6B38C8AD1F98DB5100FCDE58 /* q24_a1.txt */,
 				6BAAD8E11F8C74A30074CE39 /* jawiki-country.json */,
 			);
 			path = LanguageProcessing100knock2015Tests;
@@ -265,6 +268,7 @@
 				6B53C4C21F8A6AB5007217E3 /* q15_a2.txt in Resources */,
 				6BAAD8E21F8C74A80074CE39 /* jawiki-country.json in Resources */,
 				6B53C4BA1F8A5678007217E3 /* q13_a1.txt in Resources */,
+				6B38C8AE1F98DB5100FCDE58 /* q24_a1.txt in Resources */,
 				6B53C4C61F8BA54D007217E3 /* q16_a1.txt in Resources */,
 				6BAAD8DC1F8BC7CA0074CE39 /* q19_a1.txt in Resources */,
 				6BAAD8DE1F8BD31A0074CE39 /* q11_a1.txt in Resources */,

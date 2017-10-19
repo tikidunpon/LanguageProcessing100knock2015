@@ -17,19 +17,13 @@ struct Chapter3 {
     //20. JSONデータの読み込み
     //Wikipedia記事のJSONファイルを読み込み，「イギリス」に関する記事本文を表示せよ．問題21-29では，ここで抽出した記事本文に対して実行せよ．
     static func q20(input: String) -> WikiItem {
-        let lines = input.components(separatedBy: CharacterSet.newlines).filter{ !$0.isEmpty }
-        let decoder = JSONDecoder()
-        let ukWiki = lines.map{
-            return try! decoder.decode(WikiItem.self, from: $0.data(using: .utf8)!)
-            }.filter{ $0.title == "イギリス" }
-            .first!
-        return ukWiki
+        return ukWikiItem(input: input)
     }
     
     //21. カテゴリ名を含む行を抽出
     //記事中でカテゴリ名を宣言している行を抽出せよ．
     static func q21(input: String) -> [String] {
-        let ukWiki = q20(input: input)
+        let ukWiki = ukWikiItem(input: input)
         let linesHasCategory = ukWiki.text.components(separatedBy: CharacterSet.newlines).filter{ $0.contains("Category") }
         return linesHasCategory
     }
@@ -68,7 +62,7 @@ struct Chapter3 {
     }
     
     static func q23(input: String) -> String {
-        let ukWiki = q20(input: input)
+        let ukWiki = ukWikiItem(input: input)
         let lines = ukWiki.text.components(separatedBy: CharacterSet.newlines)
         let sections = lines.flatMap { (line) -> Section? in
             let matche = line.matches(regex: "^(={2,})\\s*(.+?)\\s*={2,}$")
@@ -81,8 +75,35 @@ struct Chapter3 {
         return sections.map{ "\($0.name), \($0.level)" }.joined(separator: "\n")
     }
   
+    //24. ファイル参照の抽出
+    //記事から参照されているメディアファイルをすべて抜き出せ．
+    static func q24(input: String) -> String {
+        let ukWiki = ukWikiItem(input: input)
+        let matches = ukWiki.text.matches(regex: "(ファイル:(.+?)|File:(.+?))[|]")
+        let matchedFileIndeices = stride(from: 2, to: matches.count, by: 3).map{$0}
+        
+        return matches.enumerated().reduce("") { (combined, pair) -> String in
+            if matchedFileIndeices.contains(pair.offset) {
+                return "\(combined)\(pair.element)\n"
+            } else {
+                return combined
+            }
+        }
+    }
 
+}
 
+extension Chapter3 {
+    
+    static func ukWikiItem(input: String) -> WikiItem {
+        let lines = input.components(separatedBy: CharacterSet.newlines).filter{ !$0.isEmpty }
+        let decoder = JSONDecoder()
+        let ukWiki = lines.map{
+            return try! decoder.decode(WikiItem.self, from: $0.data(using: .utf8)!)
+            }.filter{ $0.title == "イギリス" }
+            .first!
+        return ukWiki
+    }
 }
 
 extension String {
@@ -98,7 +119,9 @@ extension String {
             for result in results {
                 for i in 0..<result.numberOfRanges {
                     let range = Range.init(result.range(at: i), in: self)
-                    matches.append(String(self[range!]))
+                    if let r = range {
+                        matches.append(String(self[r]))
+                    }
                 }
             }
             

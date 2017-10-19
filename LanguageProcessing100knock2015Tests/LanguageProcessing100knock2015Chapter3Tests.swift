@@ -93,17 +93,22 @@ class LanguageProcessing100knock2015Chapter3Tests: XCTestCase {
         """
         XCTAssertEqual(actual, expected)
     }
+    
+    func testQ24() {
+        let actual = Chapter3.q24(input: inputContents)
+        XCTAssertEqual(actual, getContents(inFileName: "q24_a1", ofType: "txt"))
+    }
 }
 
 extension LanguageProcessing100knock2015Chapter3Tests {
-  
-  var inputContents : String {
-    return getContents(inFileName: "jawiki-country")
-  }
-  
-  func getContents(inFileName: String) -> String {
-    let path = Bundle(for: type(of: self)).path(forResource: inFileName, ofType: "json")
-    let s = try! String(contentsOfFile: path!)
-    return s
-  }
+    
+    var inputContents : String {
+        return getContents(inFileName: "jawiki-country", ofType: "json")
+    }
+    
+    func getContents(inFileName: String, ofType: String) -> String {
+        let path = Bundle(for: type(of: self)).path(forResource: inFileName, ofType: ofType)
+        let s = try! String(contentsOfFile: path!)
+        return s
+    }
 }
