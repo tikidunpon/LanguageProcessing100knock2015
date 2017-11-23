@@ -13,6 +13,11 @@ struct WikiItem: Codable {
     let text: String
 }
 
+struct Section {
+    let name: String
+    let level: Int
+}
+
 struct Chapter3 {
     //20. JSONデータの読み込み
     //Wikipedia記事のJSONファイルを読み込み，「イギリス」に関する記事本文を表示せよ．問題21-29では，ここで抽出した記事本文に対して実行せよ．
@@ -56,11 +61,6 @@ struct Chapter3 {
     
     //23. セクション構造
     //記事中に含まれるセクション名とそのレベル（例えば"== セクション名 =="なら1）を表示せよ．
-    struct Section {
-        let name: String
-        var level : Int
-    }
-    
     static func q23(input: String) -> String {
         let ukWiki = ukWikiItem(input: input)
         let lines = ukWiki.text.components(separatedBy: CharacterSet.newlines)
@@ -94,7 +94,7 @@ struct Chapter3 {
 }
 
 extension Chapter3 {
-    
+    /// 入力されたjsonからタイトルがイギリスのものを探し先頭の1件を返す
     static func ukWikiItem(input: String) -> WikiItem {
         let lines = input.components(separatedBy: CharacterSet.newlines).filter{ !$0.isEmpty }
         let decoder = JSONDecoder()
@@ -108,6 +108,20 @@ extension Chapter3 {
 
 extension String {
     
+    /// 入力された正規表現文字列にマッチした結果を配列で返す
+    ///
+    ///     //（例）下記のように正規表現を引数に渡して利用します。
+    ///     let matches = "Swift Moji 9876".matches(regex: "^(.+)\\s(\\d{4})")
+    ///
+    ///     // 戻り値の先頭はマッチ結果の完全なキャプチャを返します。
+    ///     matches.first // "Swift Moji 9876"
+    ///
+    ///     // 個別のキャプチャされたグループは[1]以降に格納されます。
+    ///     matches[1] // "Swift Moji"
+    ///     matches.last // "2017"
+    ///
+    /// - Parameter regex: 正規表現文字列
+    /// - Returns: マッチ結果
     func matches(regex: String!) -> [String] {
         do {
             let regex = try NSRegularExpression(pattern: regex, options: [])
